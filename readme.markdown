@@ -4,6 +4,17 @@ The workshop is divided into five sections, each taking between 60 and 75 minute
 As our time and progress allows, we will spend more time with the later topics and their associated materials.
 
 
+## Schedule
+
+topic | time
+------|-----
+Overview and Tools | 9:00-10:00
+Python Basics | 10:15-11:15
+Data Handling | 12:30-13:45
+Text Analysis | 14:00-15:00
+Machine Learning | 15:15-16:30
+
+
 ## Materials
 
 There is a notebook and slide deck for each section.
@@ -23,16 +34,20 @@ Also, there is an `environment.yml` file for setting up your Anaconda environmen
 This file is much more specific about particular software versions, and it is largely specific to both macOS and particular hardware.
 I include it for documentation reasons, but you should generally use the more general (i.e. compatible) `environment.yml`.
 
+## Resolving Potential Setup Issues
 
-## Schedule
+In some testing, it seems that Anaconda is not reliably installing the `nytimesarticle` package used in section 03. To resolve this issue, do the following:
 
-topic | time
-------|-----
-Overview and Tools | 9:00-10:00
-Python Basics | 10:15-11:15
-Data Handling | 12:30-13:45
-Text Analysis | 14:00-15:00
-Machine Learning | 15:15-16:30
+1. Open a terminal (on Windows, use the "Anaconda (64-bit)" prompt in the start menu).
+1. Activate the `workshop` environment using the command `conda activate workshop`.
+1. Install the package using the command `pip install nytimesarticle`. There may be warnings or errors that are not relevant for our purposes, so long as you see that `nytimesarticle` was installed successfully.
+
+
+Similarly, some features of TextBlob (mainly used in section 04) depend on text corpora that may not have been automatically installed. To resolve this issue, do the following:
+
+1. Open a terminal (on Windows, use the "Anaconda (64-bit)" prompt in the start menu).
+1. Activate the `workshop` environment using the command `conda activate workshop`.
+1. Install the corpora using the command `python -m textblob.download_corpora`. Again, there may be warnings or errors that are not relevant for our purposes, but you should see a series of successful downloads.
 
 
 ## About Jason
